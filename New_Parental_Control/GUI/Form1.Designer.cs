@@ -28,8 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.RefreshToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.LockToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.UnlockToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.TImeLockToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.ExapleTImetoolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
@@ -37,10 +42,8 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.RefreshToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.LockToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.UnlockToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.TImeLockToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.Check_timer = new System.Windows.Forms.Timer(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -68,13 +71,48 @@
             this.toolStrip1.TabIndex = 5;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // RefreshToolStripButton
+            // 
+            this.RefreshToolStripButton.Image = global::New_Parental_Control.Properties.Resources.refresh;
+            this.RefreshToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.RefreshToolStripButton.Name = "RefreshToolStripButton";
+            this.RefreshToolStripButton.Size = new System.Drawing.Size(81, 22);
+            this.RefreshToolStripButton.Text = "Обновить";
+            // 
+            // LockToolStripButton
+            // 
+            this.LockToolStripButton.Image = global::New_Parental_Control.Properties.Resources._lock;
+            this.LockToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.LockToolStripButton.Name = "LockToolStripButton";
+            this.LockToolStripButton.Size = new System.Drawing.Size(111, 22);
+            this.LockToolStripButton.Text = "Заблокировать";
+            this.LockToolStripButton.Click += new System.EventHandler(this.LockToolStripButton_Click);
+            // 
+            // UnlockToolStripButton
+            // 
+            this.UnlockToolStripButton.Image = global::New_Parental_Control.Properties.Resources.lock_btn1;
+            this.UnlockToolStripButton.ImageTransparentColor = System.Drawing.Color.Lime;
+            this.UnlockToolStripButton.Name = "UnlockToolStripButton";
+            this.UnlockToolStripButton.Size = new System.Drawing.Size(116, 22);
+            this.UnlockToolStripButton.Text = "Разблокировать";
+            this.UnlockToolStripButton.Click += new System.EventHandler(this.UnlockToolStripButton_Click);
+            // 
+            // TImeLockToolStripButton
+            // 
+            this.TImeLockToolStripButton.Image = global::New_Parental_Control.Properties.Resources.time_lock;
+            this.TImeLockToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TImeLockToolStripButton.Name = "TImeLockToolStripButton";
+            this.TImeLockToolStripButton.Size = new System.Drawing.Size(175, 22);
+            this.TImeLockToolStripButton.Text = "Временно разблокировать";
+            this.TImeLockToolStripButton.Click += new System.EventHandler(this.TImeLockToolStripButton_Click);
+            // 
             // ExapleTImetoolStripComboBox1
             // 
             this.ExapleTImetoolStripComboBox1.Items.AddRange(new object[] {
-            "5",
-            "10",
-            "15",
-            "20"});
+            "5 мин",
+            "10 мин",
+            "15 мин",
+            "20 мин"});
             this.ExapleTImetoolStripComboBox1.Name = "ExapleTImetoolStripComboBox1";
             this.ExapleTImetoolStripComboBox1.Size = new System.Drawing.Size(121, 25);
             // 
@@ -129,45 +167,25 @@
             this.columnHeader2.Text = "Состояние приложения";
             this.columnHeader2.Width = 200;
             // 
-            // RefreshToolStripButton
+            // Check_timer
             // 
-            this.RefreshToolStripButton.Image = global::New_Parental_Control.Properties.Resources.refresh;
-            this.RefreshToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.RefreshToolStripButton.Name = "RefreshToolStripButton";
-            this.RefreshToolStripButton.Size = new System.Drawing.Size(81, 22);
-            this.RefreshToolStripButton.Text = "Обновить";
+            this.Check_timer.Enabled = true;
+            this.Check_timer.Tick += new System.EventHandler(this.Check_timer_Tick);
             // 
-            // LockToolStripButton
+            // textBox1
             // 
-            this.LockToolStripButton.Image = global::New_Parental_Control.Properties.Resources._lock;
-            this.LockToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.LockToolStripButton.Name = "LockToolStripButton";
-            this.LockToolStripButton.Size = new System.Drawing.Size(111, 22);
-            this.LockToolStripButton.Text = "Заблокировать";
-            this.LockToolStripButton.Click += new System.EventHandler(this.LockToolStripButton_Click);
-            // 
-            // UnlockToolStripButton
-            // 
-            this.UnlockToolStripButton.Image = global::New_Parental_Control.Properties.Resources.lock_btn1;
-            this.UnlockToolStripButton.ImageTransparentColor = System.Drawing.Color.Lime;
-            this.UnlockToolStripButton.Name = "UnlockToolStripButton";
-            this.UnlockToolStripButton.Size = new System.Drawing.Size(116, 22);
-            this.UnlockToolStripButton.Text = "Разблокировать";
-            this.UnlockToolStripButton.Click += new System.EventHandler(this.UnlockToolStripButton_Click);
-            // 
-            // TImeLockToolStripButton
-            // 
-            this.TImeLockToolStripButton.Image = global::New_Parental_Control.Properties.Resources.time_lock;
-            this.TImeLockToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.TImeLockToolStripButton.Name = "TImeLockToolStripButton";
-            this.TImeLockToolStripButton.Size = new System.Drawing.Size(168, 22);
-            this.TImeLockToolStripButton.Text = "Временно заблокировать";
+            this.textBox1.Location = new System.Drawing.Point(437, 85);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(324, 231);
+            this.textBox1.TabIndex = 9;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.toolStrip1);
@@ -198,6 +216,8 @@
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.Timer Check_timer;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
