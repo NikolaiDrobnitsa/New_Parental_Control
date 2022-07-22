@@ -99,5 +99,20 @@
   <ItemGroup>
     <None Include="Resources\lock_btn.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock_btn1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock_time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time_lock.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

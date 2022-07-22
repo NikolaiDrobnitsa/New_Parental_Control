@@ -17,7 +17,8 @@ namespace New_Parental_Control
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Auth_form());
+            //Application.Run(new Auth_form());
+            Application.Run(new Form1());
         }
     }
 }

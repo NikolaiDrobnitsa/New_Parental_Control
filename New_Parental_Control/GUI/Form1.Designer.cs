@@ -28,26 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.RefreshToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.LockToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.UnlockToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.TImeLockToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.ExapleTImetoolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.RefreshToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.LockToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.UnlockToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.TImeLockToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -67,43 +62,11 @@
             this.UnlockToolStripButton,
             this.TImeLockToolStripButton,
             this.ExapleTImetoolStripComboBox1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(800, 25);
             this.toolStrip1.TabIndex = 5;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // RefreshToolStripButton
-            // 
-            this.RefreshToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("RefreshToolStripButton.Image")));
-            this.RefreshToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.RefreshToolStripButton.Name = "RefreshToolStripButton";
-            this.RefreshToolStripButton.Size = new System.Drawing.Size(81, 22);
-            this.RefreshToolStripButton.Text = "Обновить";
-            // 
-            // LockToolStripButton
-            // 
-            this.LockToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("LockToolStripButton.Image")));
-            this.LockToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.LockToolStripButton.Name = "LockToolStripButton";
-            this.LockToolStripButton.Size = new System.Drawing.Size(111, 22);
-            this.LockToolStripButton.Text = "Заблокировать";
-            // 
-            // UnlockToolStripButton
-            // 
-            this.UnlockToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("UnlockToolStripButton.Image")));
-            this.UnlockToolStripButton.ImageTransparentColor = System.Drawing.Color.Lime;
-            this.UnlockToolStripButton.Name = "UnlockToolStripButton";
-            this.UnlockToolStripButton.Size = new System.Drawing.Size(116, 22);
-            this.UnlockToolStripButton.Text = "Разблокировать";
-            // 
-            // TImeLockToolStripButton
-            // 
-            this.TImeLockToolStripButton.Image = global::New_Parental_Control.Properties.Resources._108181;
-            this.TImeLockToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.TImeLockToolStripButton.Name = "TImeLockToolStripButton";
-            this.TImeLockToolStripButton.Size = new System.Drawing.Size(168, 22);
-            this.TImeLockToolStripButton.Text = "Временно заблокировать";
             // 
             // ExapleTImetoolStripComboBox1
             // 
@@ -120,7 +83,7 @@
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
             this.toolStripTextBox1});
-            this.toolStrip2.Location = new System.Drawing.Point(0, 49);
+            this.toolStrip2.Location = new System.Drawing.Point(0, 25);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(800, 25);
             this.toolStrip2.TabIndex = 6;
@@ -138,30 +101,6 @@
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(100, 25);
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.файлToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 7;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // файлToolStripMenuItem
-            // 
-            this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.выходToolStripMenuItem});
-            this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.файлToolStripMenuItem.Text = "Файл";
-            // 
-            // выходToolStripMenuItem
-            // 
-            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
-            this.выходToolStripMenuItem.Text = "Выход";
-            // 
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -172,10 +111,10 @@
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(0, 74);
+            this.listView1.Location = new System.Drawing.Point(0, 50);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(800, 376);
+            this.listView1.Size = new System.Drawing.Size(800, 400);
             this.listView1.TabIndex = 8;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -190,6 +129,40 @@
             this.columnHeader2.Text = "Состояние приложения";
             this.columnHeader2.Width = 200;
             // 
+            // RefreshToolStripButton
+            // 
+            this.RefreshToolStripButton.Image = global::New_Parental_Control.Properties.Resources.refresh;
+            this.RefreshToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.RefreshToolStripButton.Name = "RefreshToolStripButton";
+            this.RefreshToolStripButton.Size = new System.Drawing.Size(81, 22);
+            this.RefreshToolStripButton.Text = "Обновить";
+            // 
+            // LockToolStripButton
+            // 
+            this.LockToolStripButton.Image = global::New_Parental_Control.Properties.Resources._lock;
+            this.LockToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.LockToolStripButton.Name = "LockToolStripButton";
+            this.LockToolStripButton.Size = new System.Drawing.Size(111, 22);
+            this.LockToolStripButton.Text = "Заблокировать";
+            this.LockToolStripButton.Click += new System.EventHandler(this.LockToolStripButton_Click);
+            // 
+            // UnlockToolStripButton
+            // 
+            this.UnlockToolStripButton.Image = global::New_Parental_Control.Properties.Resources.lock_btn1;
+            this.UnlockToolStripButton.ImageTransparentColor = System.Drawing.Color.Lime;
+            this.UnlockToolStripButton.Name = "UnlockToolStripButton";
+            this.UnlockToolStripButton.Size = new System.Drawing.Size(116, 22);
+            this.UnlockToolStripButton.Text = "Разблокировать";
+            this.UnlockToolStripButton.Click += new System.EventHandler(this.UnlockToolStripButton_Click);
+            // 
+            // TImeLockToolStripButton
+            // 
+            this.TImeLockToolStripButton.Image = global::New_Parental_Control.Properties.Resources.time_lock;
+            this.TImeLockToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TImeLockToolStripButton.Name = "TImeLockToolStripButton";
+            this.TImeLockToolStripButton.Size = new System.Drawing.Size(168, 22);
+            this.TImeLockToolStripButton.Text = "Временно заблокировать";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -198,9 +171,7 @@
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -208,8 +179,6 @@
             this.toolStrip1.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,9 +193,6 @@
         private System.Windows.Forms.ToolStripButton TImeLockToolStripButton;
         private System.Windows.Forms.ToolStripComboBox ExapleTImetoolStripComboBox1;
         private System.Windows.Forms.ToolStrip toolStrip2;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.ListView listView1;
